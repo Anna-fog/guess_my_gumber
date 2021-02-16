@@ -22,7 +22,6 @@ document.querySelector('.check').addEventListener('click', function() {
   } else if (guess === secretNumber) {
     number.textContent = secretNumber;
     displayMessage('😺 Correct Number!');
-    score++;
     scoreNumber.textContent = score;
 
     body.style.backgroundColor = '#60b347';
@@ -30,13 +29,13 @@ document.querySelector('.check').addEventListener('click', function() {
 
     if (score > highScore) {
       highScore = score;
-      document.querySelector('.highScore').textContent = highScore;
+      document.querySelector('.highscore').textContent = highScore;
     }
 
     // when guess is wrong
-
   } else if (guess !== secretNumber) {
     if (score > 1) {
+      document.querySelector('.guess').value = '';
       displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
       score--;
       scoreNumber.textContent = score;
