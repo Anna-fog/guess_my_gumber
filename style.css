@@ -47,6 +47,7 @@ main {
 /* ELEMENTS STYLE */
 h1 {
   font-size: 4rem;
+  line-height: 4.5rem;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -115,4 +116,64 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+
+/* ADAPTIVE */
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right {
+    order: -1;
+    margin-bottom: 50px;
+    text-align: center;
+    width: auto;
+  }
+
+  .left {
+    width: auto;
+  }
+
+  .message {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .between {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .again {
+    position: relative;
+    max-width: 300px;
+    margin-top: 25px;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    top: 54%;
+  }
+
+  .number {
+    width: 26rem;
+  }
+
+
 }
